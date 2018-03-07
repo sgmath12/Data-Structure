@@ -6,15 +6,16 @@ typedef struct Node {
 class Graph
 {
 public:
-	list<Node>* adj;
 	int V;
 	Graph(int vertex);
 	void addEdge(int i, int j, int weight);
+private:
+	list<Node>* adj;
 
 };
 
 Graph::Graph(int vertex) {
-	this->V = V;
+	this->V = vertex; // (V = vertex) ; 
 	adj = new list<Node>[V + 1];
 }
 
